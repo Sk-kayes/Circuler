@@ -7,16 +7,16 @@ import { Bloom, EffectComposer } from '@react-three/postprocessing'
 
 const App = () => {
   return (
-    <Canvas flat camera={{fov: 30}}>
-    <OrbitControls />
-    <ambientLight />
+    <Canvas flat camera={{ fov: 30 }}>
+      <OrbitControls />
+      <ambientLight />
       <Scene />
       <EffectComposer>
         <Bloom
-        mipmapBlur
-    intensity={5.0}
-    luminanceThreshold={0.2}
-    luminanceSmoothing={0} />
+          mipmapBlur
+          intensity={0}
+          luminanceThreshold={0.3}
+          luminanceSmoothing={0} />
       </EffectComposer>
     </Canvas>
   )

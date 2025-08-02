@@ -9,8 +9,9 @@ const Scene = () => {
     useFrame((state, delta)=> {
         cly.current.rotation.y += delta;
     })
+
     return (
-        <group rotation={[0, 1.2, 0.3]} >
+        <group rotation={[0, 1.2, -0.1]} >
             <mesh ref={cly}>
             <cylinderGeometry args={[1, 1, 1, 60, 60, true]} />
             <meshStandardMaterial map={tex} transparent side={THREE.DoubleSide} />
